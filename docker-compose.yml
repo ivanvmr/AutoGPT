@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  auto-gpt:
+    image: significantgravitas/auto-gpt
+    env_file:
+      - .env
+    ports:
+      - "8000:8000" # Remova se quiser rodar um único agente em modo TTY
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
